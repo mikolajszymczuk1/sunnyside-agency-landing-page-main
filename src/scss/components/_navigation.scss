@@ -1,0 +1,146 @@
+@use "/scss/utilities/colors" as *;
+@use "/scss/utilities/variables" as *;
+@use "/scss/mixins/transform-mixins";
+
+// Style for navigation component
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    padding: 30px;
+
+    &__logo-link {
+        display: block;
+
+        text-decoration: none;
+    }
+
+    &__logo {
+        @include transform-mixins.size(120px, auto);
+
+        filter: drop-shadow(0 0 6px rgba($very-dark-desaturated-blue, 0.2));
+
+        @media screen and (min-width: 768px) {
+            width: 130px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 150px;
+        }
+    }
+
+    &__hamburger-button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        @include transform-mixins.size(25px, auto);
+
+        @media screen and (min-width: 768px) {
+            width: 30px;
+        }
+
+        &--active {
+            opacity: 0.7;
+        }
+    }
+
+    &__links-container {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        
+        padding: 40px 20px;
+
+        width: 85%;
+
+        transform: translateX(-50%);
+        background-color: $white;
+
+        z-index: 1;
+
+        @media screen and (min-width: 768px) {
+            width: 90%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            position: static;
+
+            padding: 0;
+            
+            width: unset;
+            
+            transform: translateX(0);
+            background-color: transparent;
+        }
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            right: 0;
+
+            @include transform-mixins.size(0);
+
+            border-bottom: 30px solid $white;
+            border-left: 30px solid transparent;
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__link {
+        margin-bottom: 30px;
+
+        font-family: $barlow-font;
+        text-decoration: none;
+        text-align: center;
+        color: $dark-grayish-blue;
+    
+        @media screen and (min-width: 1024px) {
+            margin: 0 25px;
+
+            color: $white;
+            text-shadow: 0 0 6px rgba($very-dark-desaturated-blue, 0.2);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--unique {
+            padding: 15px 25px;
+
+            border-radius: 25px;
+            background-color: $yellow;
+
+            font-size: 0.9em;
+            font-family: $fraunces-font;
+            color: $very-dark-desaturated-blue;
+
+            @media screen and (min-width: 1024px) {
+                background-color: $white;
+            }
+        }
+    }
+}
