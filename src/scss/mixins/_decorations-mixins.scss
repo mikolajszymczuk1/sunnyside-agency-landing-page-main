@@ -1,0 +1,7 @@
+// Background image mixin
+@mixin bg-image($path) {
+    background-image: url(#{ $path });
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
