@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -24,8 +24,33 @@
 </head>
 
 <body>
-    <!-- Code here ... -->
-    <h1>Hello World !!!</h1>
+    <!-- Header -->
+    <header class="hero">
+        <!-- Navigation -->
+        <nav class="navigation">
+            <a class="navigation__logo-link" href="#">
+                <img class="navigation__logo" src="svg/logo.svg" alt="Sunnyside logo image" title="Sunnyside logo">
+            </a>
+
+            <button class="navigation__hamburger-button">
+                <img class="navigation__hamburger" src="svg/icon-hamburger.svg" alt="Hamburger icon image" title="Hamburger icon">
+            </button>
+            
+            <!-- Links container -->
+            <div class="navigation__links-container">
+                <a class="navigation__link" href="#About">About</a>
+                <a class="navigation__link" href="#Services">Services</a>
+                <a class="navigation__link" href="#Projects">Projects</a>
+                <a class="navigation__link navigation__link--unique" href="#Contact">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Header content -->
+        <div class="hero__content">
+            <h1 class="hero__text">WE ARE CREATIVES</h1>
+            <img class="hero__arrow-icon" src="svg/icon-arrow-down.svg" alt="Arrow down image" title="Arrow down">
+        </div>
+    </header>
 
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
