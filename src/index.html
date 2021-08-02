@@ -9,12 +9,14 @@
     <meta name="description" content="Simple landing page created as chellange from Frontend Mentor">
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-    <!-- Preloads -->
-    <link rel="preload" href="scss/main.scss" as="style">
-
     <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="scss/main.scss" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" as="style">
+
 
     <!-- Google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap">
@@ -51,6 +53,38 @@
             <img class="hero__arrow-icon" src="svg/icon-arrow-down.svg" alt="Arrow down image" title="Arrow down">
         </div>
     </header>
+
+    <!-- Text cards -->
+    <section class="text-cards">
+        <!-- Single card -->
+        <article class="text-cards__card">
+            <div class="text-cards__card-image text-cards__card-image--yellow"></div>
+            <div class="text-cards__card-content">
+                <h2 class="text-cards__card-title">Transform your <br> brand</h2>
+
+                <p class="text-cards__card-text">
+                    We are a full-service creative agency specializing in helping brands grow fast. 
+                    Engage your clients through compelling visuals that do most of the marketing for you.
+                </p>
+
+                <a class="text-cards__card-link text-cards__card-link--yellow" href="#learn-more">LEARN MORE</a>
+            </div>
+        </article>
+
+        <article class="text-cards__card text-cards__card--inverse">
+            <div class="text-cards__card-image text-cards__card-image--red"></div>
+            <div class="text-cards__card-content">
+                <h2 class="text-cards__card-title">Stand out to the right <br> audience</h2>
+                
+                <p class="text-cards__card-text">
+                    Using a collaborative formula of designers, researchers,
+                    photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+                </p>
+
+                <a class="text-cards__card-link text-cards__card-link--red" href="#learn-more">LEARN MORE</a>
+            </div>
+        </article>
+    </section>
 
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
