@@ -1,0 +1,109 @@
+@use "/scss/utilities/colors" as *;
+@use "/scss/utilities/variables" as *;
+@use "/scss/mixins/transform-mixins";
+@use "/scss/mixins/decorations-mixins";
+
+// Styles for design cards section
+.design-cards {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__card {
+        position: relative;
+        
+        height: 600px;
+
+        @media screen and (min-width: 768px) {
+            flex-basis: 50%;
+        }
+
+        @media screen and (min-width: 1600px) {
+            height: 650px;
+        }
+
+        &--green {
+            @include decorations-mixins.bg-image("/images/mobile/image-graphic-design.jpg");
+
+            @media screen and (min-width: 600px) {
+                background-image: url("/images/desktop/image-graphic-design.jpg");
+            }
+
+            #{ $self }__card-title,
+            #{ $self }__card-text {
+                color: $graphic-design-text-color;
+            }
+        }
+
+        &--blue {
+            @include decorations-mixins.bg-image("/images/mobile/image-photography.jpg");
+
+            @media screen and (min-width: 600px) {
+                background-image: url("/images/desktop/image-photography.jpg");   
+            }
+
+            #{ $self }__card-title,
+            #{ $self }__card-text {
+                color: $photography-text-color;
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+
+        padding: 25px;
+
+        width: 100%;
+
+        transform: translateX(-50%);
+
+        @media screen and (min-width: 600px) {
+            bottom: 50px;
+        
+            width: 60%;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 80%;
+        }
+
+        @media screen and (min-width: 1440px) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: 1600px) {
+            bottom: 70px;
+        }
+    }
+
+    &__card-title {
+        margin-bottom: 25px;
+
+        font-weight: 900;
+        font-family: $fraunces-font;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    &__card-text {
+        font-family: $barlow-font;
+        text-align: center;
+        font-size: 0.8em;
+        line-height: 25px;
+
+        @media screen and (min-width: 1024px) {
+            line-height: 30px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1em;
+        }
+    }
+}
