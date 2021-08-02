@@ -1,0 +1,141 @@
+@use "/scss/utilities/colors" as *;
+@use "/scss/utilities/variables" as *;
+@use "/scss/mixins/decorations-mixins";
+@use "/scss/mixins/transform-mixins";
+
+// Styles for text cards section
+.text-cards {
+    &__card {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        &--inverse {
+            @media screen and (min-width: 768px) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__card-image {
+        @include transform-mixins.size(100%, 300px);
+
+        @media screen and (min-width: 600px) {
+            height: 400px;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-basis: 50%;
+            height: auto;
+        }
+    
+        &--yellow {
+            @include decorations-mixins.bg-image("/images/mobile/image-transform.jpg");
+
+            @media screen and (min-width: 1024px) {
+                background-image: url("/images/desktop/image-transform.jpg");
+            }
+        }
+
+        &--red {
+            @include decorations-mixins.bg-image("/images/mobile/image-stand-out.jpg");
+
+            @media screen and (min-width: 1024px) {
+                background-image: url("/images/desktop/image-stand-out.jpg");
+            }
+        }
+    }
+
+    &__card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 60px 20px;
+
+        @media screen and (min-width: 768px) {
+            flex-basis: 50%;
+
+            padding: 80px 50px;
+
+            align-items: flex-start;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 12vw 8vw;
+        }
+    }
+
+    &__card-title {
+        text-align: center;
+        font-family: $fraunces-font;
+        color: $very-dark-desaturated-blue;
+
+        @media screen and (min-width: 768px) {
+            text-align: start;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 2em;
+        }
+    }
+
+    &__card-text {
+        margin: 30px 0;
+
+        text-align: center;
+        font-family: $barlow-font;
+        color: $very-dark-grayish-blue;
+        line-height: 30px;
+
+        @media screen and (min-width: 768px) {
+            text-align: start;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin: 40px 0;
+
+            font-size: 1.2em;
+        }
+    }
+
+    &__card-link {
+        position: relative;
+
+        color: $very-dark-desaturated-blue;
+        font-family: $fraunces-font;
+        text-decoration: none;
+        font-size: 0.9em;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+
+            @include transform-mixins.size(110%, 30%);
+
+            border-radius: 10px;
+            transform: translateX(-50%);
+            opacity: 0.4;
+
+            z-index: -1;
+        }
+
+        &--yellow {
+            &::before {
+                background-color: $yellow;
+            }
+        }
+
+        &--red {
+            &::before {
+                background-color: $soft-red;
+            }
+        }
+    }
+}
