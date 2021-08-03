@@ -55,8 +55,11 @@
         }
 
         @media screen and (min-width: 1440px) {
-            font-size: 4em;
             letter-spacing: 10px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            font-size: 4em;
         }
     }
 
