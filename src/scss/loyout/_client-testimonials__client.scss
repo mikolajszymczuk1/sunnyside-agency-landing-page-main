@@ -1,0 +1,142 @@
+@use "/scss/utilities/colors" as *;
+@use "/scss/utilities/variables" as *;
+@use "/scss/mixins/transform-mixins";
+@use "/scss/mixins/decorations-mixins";
+
+// Styles for client testimionials section
+.client-testimonials {
+    @media screen and (min-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 150px 0;
+    }
+
+    &__section-title {
+        padding: 50px 0 15px 0;
+
+        font-family: $fraunces-font;
+        color: $grayish-blue;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        text-align: center;
+        font-weight: 900;
+
+        @media screen and (min-width: 540px) {
+            font-size: 1em;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 0;
+            margin-bottom: 50px;
+
+            font-size: 1.3em;
+            letter-spacing: 4px;
+        }
+    }
+
+    &__clients-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+
+            margin: 0 auto;
+
+            width: 90%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 80%;
+        }
+    }
+
+    &__client {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 40px;
+
+        @media screen and (min-width: 768px) {
+            padding: 40px 20px;
+        }
+    }
+
+    &__client-image {
+        margin-bottom: 25px;
+
+        @include transform-mixins.size(60px);
+
+        border-radius: 50%;
+
+        @media screen and (min-width: 540px) {
+            @include transform-mixins.size(70px);
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 50px;
+        }
+
+        &--emily {
+            @include decorations-mixins.bg-image("/images/image-emily.jpg");
+        }
+
+        &--thomas {
+            @include decorations-mixins.bg-image("/images/image-thomas.jpg");
+        }
+
+        &--jennie {
+            @include decorations-mixins.bg-image("/images/image-jennie.jpg");
+        }
+    }
+
+    &__text {
+        margin-bottom: 25px;
+
+        font-family: $barlow-font;
+        text-align: center;
+        color: $very-dark-grayish-blue;
+        font-size: 0.8em;
+        line-height: 25px;
+
+        @media screen and (min-width: 540px) {
+            font-size: 0.9em;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 50px;
+        }
+
+        @media screen and (min-width: 1500px) {
+            width: 20vw;
+        }
+    }
+
+    &__name {
+        margin-bottom: 10px;
+
+        font-family: $fraunces-font;
+        font-size: 0.9em;
+        font-weight: 900;
+
+        @media screen and (min-width: 540px) {
+            font-size: 1em;
+        }
+    }
+
+    &__profession {
+        font-family: $barlow-font;
+        color: $grayish-blue;
+        font-size: 0.7em;
+
+        @media screen and (min-width: 540px) {
+            font-size: 0.8em;
+        }
+    }
+}
