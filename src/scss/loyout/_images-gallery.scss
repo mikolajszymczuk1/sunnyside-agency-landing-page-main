@@ -1,7 +1,7 @@
-@use "/scss/utilities/colors" as *;
-@use "/scss/utilities/variables" as *;
-@use "/scss/mixins/transform-mixins";
-@use "/scss/mixins/decorations-mixins";
+@use "../utilities/colors" as *;
+@use "../utilities/variables" as *;
+@use "../mixins/transform-mixins";
+@use "../mixins/decorations-mixins";
 
 // Styles for images gallery section
 .images-gallery {
@@ -31,10 +31,10 @@
 
         @each $img-name in $images {
             &--#{$img-name} {
-                @include decorations-mixins.bg-image("/images/mobile/image-gallery-#{$img-name}.jpg");
+                @include decorations-mixins.bg-image("/src/images/mobile/image-gallery-#{$img-name}.jpg");
 
                 @media screen and (min-width: 768px) {
-                    background-image: url("/images/desktop/image-gallery-#{$img-name}.jpg");
+                    background-image: url("/src/images/desktop/image-gallery-#{$img-name}.jpg");
                 }
             }
         }

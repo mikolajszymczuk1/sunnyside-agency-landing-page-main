@@ -1,7 +1,7 @@
-@use "/scss/utilities/colors" as *;
-@use "/scss/utilities/variables" as *;
-@use "/scss/mixins/decorations-mixins";
-@use "/scss/mixins/transform-mixins";
+@use "../utilities/colors" as *;
+@use "../utilities/variables" as *;
+@use "../mixins/transform-mixins";
+@use "../mixins/decorations-mixins";
 
 // Styles for text cards section
 .text-cards {
@@ -33,18 +33,18 @@
         }
     
         &--yellow {
-            @include decorations-mixins.bg-image("/images/mobile/image-transform.jpg");
+            @include decorations-mixins.bg-image("/src/images/mobile/image-transform.jpg");
 
             @media screen and (min-width: 1024px) {
-                background-image: url("/images/desktop/image-transform.jpg");
+                background-image: url("/src/images/desktop/image-transform.jpg");
             }
         }
 
         &--red {
-            @include decorations-mixins.bg-image("/images/mobile/image-stand-out.jpg");
+            @include decorations-mixins.bg-image("/src/images/mobile/image-stand-out.jpg");
 
             @media screen and (min-width: 1024px) {
-                background-image: url("/images/desktop/image-stand-out.jpg");
+                background-image: url("/src/images/desktop/image-stand-out.jpg");
             }
         }
     }

@@ -1,7 +1,7 @@
-@use "/scss/utilities/colors" as *;
-@use "/scss/utilities/variables" as *;
-@use "/scss/mixins/transform-mixins";
-@use "/scss/mixins/decorations-mixins";
+@use "../utilities/colors" as *;
+@use "../utilities/variables" as *;
+@use "../mixins/transform-mixins";
+@use "../mixins/decorations-mixins";
 
 // Styles for client testimionials section
 .client-testimonials {
@@ -86,15 +86,15 @@
         }
 
         &--emily {
-            @include decorations-mixins.bg-image("/images/image-emily.jpg");
+            @include decorations-mixins.bg-image("/src/images/image-emily.jpg");
         }
 
         &--thomas {
-            @include decorations-mixins.bg-image("/images/image-thomas.jpg");
+            @include decorations-mixins.bg-image("/src/images/image-thomas.jpg");
         }
 
         &--jennie {
-            @include decorations-mixins.bg-image("/images/image-jennie.jpg");
+            @include decorations-mixins.bg-image("/src/images/image-jennie.jpg");
         }
     }
 

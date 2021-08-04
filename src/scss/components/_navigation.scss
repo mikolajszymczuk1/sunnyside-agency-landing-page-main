@@ -1,6 +1,6 @@
-@use "/scss/utilities/colors" as *;
-@use "/scss/utilities/variables" as *;
-@use "/scss/mixins/transform-mixins";
+@use "../utilities/colors" as *;
+@use "../utilities/variables" as *;
+@use "../mixins/transform-mixins";
 
 // Style for navigation component
 .navigation {
