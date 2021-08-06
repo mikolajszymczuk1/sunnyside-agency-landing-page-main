@@ -7,11 +7,13 @@
 .hero {
     position: relative;
 
-    height: 100vh;
+    height: 550px;
 
     @include decorations-mixins.bg-image("/src/images/mobile/image-header.jpg");
 
     @media screen and (min-width: 1024px) {
+        height: 100vh;
+
         background-image: url("/src/images/desktop/image-header.jpg");
     }
 
